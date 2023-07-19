@@ -1,0 +1,63 @@
+@font-face {
+    font-family: 'Forum';
+    src: url("./assets/fonts/Forum.ttf");
+  }
+  
+  @font-face {
+    font-family: 'Inter';
+    src: url("./assets/fonts/Inter.ttf");
+  }
+  
+  @font-face {
+    font-family: 'Inter';
+    src: url("./assets/fonts/Inter-Bold.ttf");
+  }
+  
+  * {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    min-width: 320px;
+    font-family: 'Inter';
+    color: #fff;
+  }
+  
+  .header {
+    max-width: 1440px;
+    background-color: #000;
+    margin: 0 auto;
+  }
+
+  .profile {
+    background-image: url('./assets/icons/Subtract.svg');
+    width: 28px;
+    height: 28px;
+  }
+  
+  .container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .header-container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .welcome .container {
+    height: 600px;
+    background-image: url('./assets/images/welcome.jpg');
+    background-image: linear-gradient(to bottom, #0c0c0e, #ffffff);
+  }
