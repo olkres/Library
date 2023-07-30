@@ -371,3 +371,84 @@ text-transform: capitalize;
     bottom: 0;
     right: 0;
   }
+
+  /*coffee shop start*/
+
+  .shop__title {
+    padding-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .shop__content {
+    padding-top: 40px;
+    margin-bottom: 40px;
+    color: #000;
+    text-align: center;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px; /* 200% */
+    letter-spacing: 2px;
+    text-transform: capitalize;
+  }
+
+  .menu__title {
+    color: #BB945F;
+    font-family: Forum;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px; /* 100% */
+    letter-spacing: 2px;
+    text-transform: capitalize;
+  }
+
+  .menu__title-list {
+    padding-top: 40px;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .shop__menu-range {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+  }
+  
+  .range__name {
+    color: #000;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px; /* 200% */
+    letter-spacing: 2px;
+    text-transform: capitalize;
+  }
+
+  .shop__menu {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .shop__menu-line {
+    width: 100px;
+    height: 1px;
+    background: #BB945F;
+    flex-grow: 1;
+  }
+
+  .shop__menu-price {
+    color: #000;
+    font-family: Forum;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px; /* 200% */
+    letter-spacing: 2px;
+    text-transform: capitalize;
+  }
