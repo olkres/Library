@@ -388,7 +388,7 @@ text-transform: capitalize;
     text-transform: capitalize;
   }
 
-  .menu__title {
+  .menu__drink, .menu__dessert {
     color: #BB945F;
     font-family: Forum;
     font-size: 40px;
@@ -399,7 +399,19 @@ text-transform: capitalize;
     text-transform: capitalize;
   }
 
-  .menu__title-list {
+  .menu__dessert {
+    text-align: right;
+  }
+
+  .drink__title-list {
+    padding-top: 40px;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .dessert__title-list {
     padding-top: 40px;
     display: flex;
     align-items: flex-end;
@@ -412,6 +424,18 @@ text-transform: capitalize;
     justify-content: space-between;
     align-items: center;
     gap: 60px;
+  }
+
+  .drink__name {
+    color: #000;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px; /* 200% */
+    letter-spacing: 2px;
+    text-transform: capitalize;
+    width: 200px;
   }
   
   .range__name {
@@ -434,7 +458,6 @@ text-transform: capitalize;
     width: 100px;
     height: 1px;
     background: #BB945F;
-    flex-grow: 1;
   }
 
   .shop__menu-price {
