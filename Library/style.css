@@ -112,7 +112,7 @@
     height: 600px;
     background-image: linear-gradient(180deg, #0C0C0E 0%, #0C0C0E 0.01%, 
                       rgba(18, 18, 21, 0.10) 100%),
-                      url('./assets/images/Welcome.jpg');
+                      url('./assets/images/welcome.jpg');
   }
 
   .welcome-content {
