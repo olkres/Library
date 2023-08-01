@@ -44,6 +44,11 @@
     text-transform: capitalize; 
   }
 
+  a {
+    color: #0C0C0E;
+    text-decoration: none;
+  }
+
   .line {
     width: 50px;
     height: 1px;
@@ -328,20 +333,12 @@ text-transform: capitalize;
     text-transform: capitalize;
   }
 
-  .favorites__items .favorites__content:last-child .favorites__button:last-child {
+  .own {
     color: #BB945F;
     border: 1px solid #BB945F;
   }
 
-  .favorites__items .favorites__content:last-child .favorites__button:last-child:hover {
-    background-color: #fff;
-    cursor: pointer;
-    color: #0C0C0E;
-    border: 1px solid #0C0C0E;
-    transition: all 0.5s;
-  }
-  
-  .favorites__button:hover {
+  .buy:hover {
     background-color: #BB945F;
     cursor: pointer;
     border: 1px solid #BB945F;
@@ -472,6 +469,65 @@ text-transform: capitalize;
   }
 
   /*coffee shop end*/
+
+  /*contacts start*/
+
+  .contacts__title {
+    padding-top: 60px;
+    margin-bottom: 20px;
+  }
+
+  .contacts__content {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 40px;
+  }
+
+  .contact__phone, .senior, .director {
+    color: #000;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 40px; /* 200% */
+    letter-spacing: 2px;
+    text-transform: capitalize;
+  }
+
+  .contact__phone {
+    margin-bottom: 40px;
+  }
+  
+  .senior {
+    padding-top: 40px;
+  }
+
+  .contact__info-director {
+    padding-top: 20px;
+  }
+  
+  .contact__info, .contact__info-director {
+    color: #000;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px; /* 200% */
+    letter-spacing: 2px;
+    text-transform: capitalize;
+  }
+
+  .phone__1 {
+    padding-top: 20px;
+  }
+
+  .phone__2 {
+    padding-top: 20px;
+  }
+
+  /*contacts end*/ 
+
+
 
   /*footer start*/
 
