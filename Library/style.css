@@ -712,11 +712,7 @@ text-transform: capitalize;
     background-color: #0C0C0E;
     height: 250px;
   }
-
-  .footer__content {
-    
-  }
-
+ 
   .info__one, .info__two {
     display: flex;
     justify-content: space-between;
