@@ -9,7 +9,7 @@
 </head>
 <body>
     <header class="header">
-        <div class="container header-container">
+        <div class="header-container">
             <div class="logo">Brooklyn Public Library</div>
             <nav class="nav">
                 <ul class="nav-list">
@@ -29,8 +29,17 @@
                         <a href="#librarycard" class="nav-link">Library Card</a>
                     </li>
                 </ul>
+                <div class="nav-close">
+                    <span class="nav-close-line"></span>
+                    <span class="nav-close-line"></span>
+                </div>
             </nav>
             <div class="profile"></div>
+            <div class="header__burger burger">
+                <span class="burger__line burger__line_first"></span>
+                <span class="burger__line burger__line_second"></span>
+                <span class="burger__line burger__line_third"></span>
+            </div>
         </div>
     </header>
     <main class="main">
@@ -51,23 +60,30 @@
                     The Brooklyn Library is a free workspace, a large number of books and a cozy coffee shop inside 
                 </div>
                 <div class="carousel">
+                    <img class="arrow__svg" src="assets/icons/arrow_left.svg" alt="arrow-left">
                     <div class="images">
                         <div class="images-items"></div>
                         <div class="images-items"></div>
                         <div class="images-items"></div>
+                        <div class="images-items"></div>
+                        <div class="images-items"></div>
                     </div>
+                    <img class="arrow__svg" src="./assets/icons/arrow_right.svg" alt="arrow-right">
                 </div>
                 <div class="carousel-pagination">
                     <label class="about-radio">
-                        
                         <span class="radio-box"></span>
                     </label>
                     <label class="about-radio">
-                        
                         <span class="radio-box"></span>
                     </label>
                     <label class="about-radio">
-                        
+                        <span class="radio-box"></span>
+                    </label>
+                    <label class="about-radio">
+                        <span class="radio-box"></span>
+                    </label>
+                    <label class="about-radio">
                         <span class="radio-box"></span>
                     </label>
                 </div>
@@ -359,6 +375,6 @@
         </div>
 
     </footer>
-    
+    <script src="index.js"></script>
 </body>
 </html>
