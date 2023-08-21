@@ -168,9 +168,16 @@
     margin-bottom: 20px;
   }
 
-  .images {
+  .carousel {
     display: flex;
-    justify-content: space-between;
+    overflow: hidden;
+  }
+
+  .images {
+    position: relative;
+    display: flex;
+    gap: 25px;
+    transition: all ease 1s;
   }
 
   .images-items {
@@ -191,11 +198,9 @@
     background-image: url(./assets/images/image3.jpg);
   }
   .images-items:nth-child(4) {
-    display: none;
     background-image: url(./assets/images/image4.jpg);
   }
   .images-items:nth-child(5) {
-    display: none;
     background-image: url(./assets/images/image5.jpg);
   }
   
@@ -215,15 +220,26 @@
   }
 
   .about-radio {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    position: relative;
+    display: inline-block;
     width: 26px;
     height: 26px;
     cursor: pointer;
   }
 
+  .radio-input {
+    position: absolute;
+    appearance: none;
+  }
+
+  .radio-input:checked+.radio-box {
+    background-color: #BB945F;
+  }
+
   .radio-box {
+    position: absolute;
+    top: 0;
+    left: 0;
     display: inline-block;
     width: 16px;
     height: 16px;
@@ -231,10 +247,6 @@
     border-radius: 50%;
   }
   
-  .carousel-pagination .about-radio:first-child .radio-box:first-child {
-    background-color: #bb945f;
-  }
-
   .pick {
     color: #000;
     font-size: 20px;

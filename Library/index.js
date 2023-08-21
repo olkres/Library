@@ -15,3 +15,22 @@
 //  burger.classList.toggle('open');
 //}
 //burger.addEventListener('click', toggleMenu);
+
+// slider
+let offset = 0;
+const sliderLine = document.querySelector('.images');
+
+document.querySelector('.radio-1').addEventListener('click', function(){
+    offset = 0;
+    sliderLine.style.left = offset + 'px';
+});
+
+document.querySelector('.radio-2').addEventListener('click', function(){
+    offset = - 475;
+    sliderLine.style.left = offset + 'px';
+});
+
+document.querySelector('.radio-3').addEventListener('click', function(){
+    offset = - 950;
+    sliderLine.style.left = offset + 'px';
+});
