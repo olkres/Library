@@ -100,24 +100,24 @@
                 <div class="line"></div>
                 <p class="pick">Pick favorites of season</p>
                 <div class="favorites__form">
-                    <label class="label-season">
-                        <input name="winter" type="radio" class="favorites-radio" id="winter" checked>
+                    <label class="label-season" data-season="winter" >
+                        <input name="season" type="radio" class="favorites-radio" id="winter-input" checked>
                         <span class="season__span">Winter</span>
                     </label>
-                    <label class="label-season">
-                        <input name="winter" type="radio" class="favorites-radio" id="spring">
+                    <label class="label-season" data-season="spring">
+                        <input name="season" type="radio" class="favorites-radio" id="spring-input">
                         <span class="season__span">Spring</span>
                     </label>
-                    <label class="label-season">
-                        <input name="winter" type="radio" class="favorites-radio" id="summer">
+                    <label class="label-season" data-season="summer">
+                        <input name="season" type="radio" class="favorites-radio" id="summer-input">
                         <span class="season__span">Summer</span>
                     </label>
-                    <label class="label-season">
-                        <input name="winter" type="radio" class="favorites-radio" id="autumn">
+                    <label class="label-season" data-season="autumn">
+                        <input name="season" type="radio" class="favorites-radio" id="autumn-input">
                         <span class="season__span">Autumn</span>
                     </label>
                 </div>
-                <div class="favorites__items">
+                <div class="favorites__items active" id="winter">
                     <div class="favorites__content">
                         <div class="book">
                             <div class="favorites__text">
@@ -198,6 +198,247 @@
                         </div>
                         <div class="book__cover">
                             <img src="./assets/images/winter/4.jpg" alt="the last queen">
+                        </div>
+                    </div>
+                </div>
+                <div class="favorites__items" id="spring">
+                    <div class="favorites__content">
+                        <div class="book">
+                            <div class="favorites__text">
+                                <p class="staff">staff picks</p>
+                                <div class="line__fav"></div>
+                                <p class="book__title">the body</p>
+                                <p class="book__author">by stephen king</p>
+                                <p class="book__description">
+                                    Powerful novel that takes you back to a nostalgic time,
+                                    exploring both the beauty and danger 
+                                    and loss of innocence that is youth.      
+                               </p>
+                            </div>
+                            <button class="favorites__button buy">buy</button>
+                        </div>
+                        <div class="book__cover">
+                            <img src="./assets/images/spring/1.jpg" alt="the book eaters">
+                        </div>
+                    </div>
+                    <div class="favorites__content">
+                        <div class="book">
+                            <div class="favorites__text">
+                                <p class="staff">staff picks</p>
+                                <div class="line__fav"></div>
+                                <p class="book__title">Carry: A Memoir of Survival on Stolen</p>
+                                <p class="book__author">by tony jenson</p>
+                                <p class="book__description">
+                                    This memoir about the author's relationship with gun violence feels 
+                                    both expansive and intimate, resulting in a lyrical indictment of the way things are.
+                               </p>
+                            </div>
+                            <button class="favorites__button buy">buy</button>
+                        </div>
+                        <div class="book__cover">
+                            <img src="./assets/images/spring/2.jpg" alt="cackle">
+                        </div>
+                    </div>
+                    <div class="favorites__content">
+                        <div class="book">
+                            <div class="favorites__text">
+                                <p class="staff">staff picks</p>
+                                <div class="line__fav"></div>
+                                <p class="book__title">Days of Distraction</p>
+                                <p class="book__author">by alexsandra chang</p>
+                                <p class="book__description">
+                                    A sardonic view of Silicon Valley culture, a meditation on race, and 
+                                    a journal of displacement and belonging, all in one form-defying package of spare prose.
+                               </p>
+                            </div>
+                            <button class="favorites__button buy">buy</button>
+                        </div>
+                        <div class="book__cover">
+                            <img src="./assets/images/spring/3.jpg" alt="dante">
+                        </div>
+                    </div>
+                    <div class="favorites__content">
+                        <div class="book">
+                            <div class="favorites__text">
+                                
+                                    <p class="staff">staff picks</p>
+                                    <div class="line__fav"></div>
+                                    <p class="book__title">DOMINICANA</p>
+                                    <p class="book__author">by angie cruz</p>
+                                    <p class="book__description">
+                                        A fascinating story of a teenage girl who marries a man 
+                                        twice her age with the promise to bring her to America. 
+                                        Her marriage is an opportunity for her family to eventually immigrate. 
+                                        For fans of Isabel Allende and Julia Alvarez.
+                                    </p>
+                            </div>
+                            <button class="favorites__button own" disabled>own</button>
+                        </div>
+                        <div class="book__cover">
+                            <img src="./assets/images/spring/4.jpg" alt="the last queen">
+                        </div>
+                    </div>
+                </div>
+                <div class="favorites__items" id="summer">
+                    <div class="favorites__content">
+                        <div class="book">
+                            <div class="favorites__text">
+                                <p class="staff">staff picks</p>
+                                <div class="line__fav"></div>
+                                <p class="book__title">Crude: A Memoir</p>
+                                <p class="book__author">by Pablo Fajardo & ​​Sophie Tardy-Joubert</p>
+                                <p class="book__description">
+                                    Drawing and color by Damien Roudeau | This book illustrates 
+                                    the struggles of a group of indigenous Ecuadoreans as they 
+                                    try to sue the ChevronTexaco company for damage their oil fields 
+                                    did to the Amazon and her people     
+                               </p>
+                            </div>
+                            <button class="favorites__button buy">buy</button>
+                        </div>
+                        <div class="book__cover">
+                            <img src="./assets/images/summer/1.jpg" alt="the book eaters">
+                        </div>
+                    </div>
+                    <div class="favorites__content">
+                        <div class="book">
+                            <div class="favorites__text">
+                                <p class="staff">staff picks</p>
+                                <div class="line__fav"></div>
+                                <p class="book__title">Let My People Go Surfing</p>
+                                <p class="book__author">by Yvon Chouinard</p>
+                                <p class="book__description">
+                                    Chouinard—climber, businessman, environmentalist—shares tales of 
+                                    courage and persistence from his experience of founding and leading 
+                                    Patagonia, Inc. Full title: Let My People Go Surfing: The Education 
+                                    of a Reluctant Businessman, Including 10 More Years of Business Unusual.
+                               </p>
+                            </div>
+                            <button class="favorites__button buy">buy</button>
+                        </div>
+                        <div class="book__cover">
+                            <img src="./assets/images/summer/2.jpg" alt="cackle">
+                        </div>
+                    </div>
+                    <div class="favorites__content">
+                        <div class="book">
+                            <div class="favorites__text">
+                                <p class="staff">staff picks</p>
+                                <div class="line__fav"></div>
+                                <p class="book__title">The Octopus Museum: Poems</p>
+                                <p class="book__author">by Brenda Shaughnessy</p>
+                                <p class="book__description">
+                                    This collection of bold and scathingly beautiful feminist poems 
+                                    imagines what comes after our current age of environmental destruction, 
+                                    racism, sexism, and divisive politics.
+                               </p>
+                            </div>
+                            <button class="favorites__button buy">buy</button>
+                        </div>
+                        <div class="book__cover">
+                            <img src="./assets/images/summer/3.jpg" alt="dante">
+                        </div>
+                    </div>
+                    <div class="favorites__content">
+                        <div class="book">
+                            <div class="favorites__text">
+                                
+                                    <p class="staff">staff picks</p>
+                                    <div class="line__fav"></div>
+                                    <p class="book__title">Shark Dialogues: A Novel</p>
+                                    <p class="book__author">by Kiana Davenport</p>
+                                    <p class="book__description">
+                                        An epic saga of seven generations of one family encompasses the 
+                                        tumultuous history of Hawaii as a Hawaiian woman gathers her four 
+                                        granddaughters together in an erotic tale of villains and dreamers, 
+                                        queens and revolutionaries, lepers and healers.
+                                    </p>
+                            </div>
+                            <button class="favorites__button buy">buy</button>
+                        </div>
+                        <div class="book__cover">
+                            <img src="./assets/images/summer/4.jpg" alt="the last queen">
+                        </div>
+                    </div>
+                </div>
+                <div class="favorites__items" id="autumn">
+                    <div class="favorites__content">
+                        <div class="book">
+                            <div class="favorites__text">
+                                <p class="staff">staff picks</p>
+                                <div class="line__fav"></div>
+                                <p class="book__title">Casual Conversation</p>
+                                <p class="book__author">by Renia White</p>
+                                <p class="book__description">
+                                    White's impressive debut collection takes readers through 
+                                    and beyond the concepts of conversation and the casual - 
+                                    both what we say to each other and what we don't, examining 
+                                    the possibilities around how we construct and communicate identity.      
+                               </p>
+                            </div>
+                            <button class="favorites__button buy">buy</button>
+                        </div>
+                        <div class="book__cover">
+                            <img src="./assets/images/autumn/1.jpg" alt="the book eaters">
+                        </div>
+                    </div>
+                    <div class="favorites__content">
+                        <div class="book">
+                            <div class="favorites__text">
+                                <p class="staff">staff picks</p>
+                                <div class="line__fav"></div>
+                                <p class="book__title">The Great Fire</p>
+                                <p class="book__author">by Lou Ureneck</p>
+                                <p class="book__description">
+                                    The harrowing story of an ordinary American and a principled Naval 
+                                    officer who, horrified by the burning of Smyrna, led an extraordinary 
+                                    rescue effort that saved a quarter of a million 
+                                    refugees from the Armenian Genocide
+                               </p>
+                            </div>
+                            <button class="favorites__button buy">buy</button>
+                        </div>
+                        <div class="book__cover">
+                            <img src="./assets/images/autumn/2.jpg" alt="cackle">
+                        </div>
+                    </div>
+                    <div class="favorites__content">
+                        <div class="book">
+                            <div class="favorites__text">
+                                <p class="staff">staff picks</p>
+                                <div class="line__fav"></div>
+                                <p class="book__title">Rickey: The Life and Legend</p>
+                                <p class="book__author">by Howard Bryant</p>
+                                <p class="book__description">
+                                    With the fall rolling around, one can't help but think of 
+                                    baseball's postseason coming up! And what better way to prepare 
+                                    for it than reading the biography of one of the game's all-time 
+                                    greatest performers, the Man of Steal, Rickey Henderson?
+                               </p>
+                            </div>
+                            <button class="favorites__button buy">buy</button>
+                        </div>
+                        <div class="book__cover">
+                            <img src="./assets/images/autumn/3.jpg" alt="dante">
+                        </div>
+                    </div>
+                    <div class="favorites__content">
+                        <div class="book">
+                            <div class="favorites__text">
+                                    <p class="staff">staff picks</p>
+                                    <div class="line__fav"></div>
+                                    <p class="book__title">Slug: And Other Stories</p>
+                                    <p class="book__author">by Megan Milks</p>
+                                    <p class="book__description">
+                                        Exes Tegan and Sara find themselves chained together by 
+                                        hairballs of codependency. A father and child experience 
+                                        the shared trauma of giving birth to gods from their wounds.
+                                    </p>
+                            </div>
+                            <button class="favorites__button buy">buy</button>
+                        </div>
+                        <div class="book__cover">
+                            <img src="./assets/images/autumn/4.jpg" alt="the last queen">
                         </div>
                     </div>
                 </div>

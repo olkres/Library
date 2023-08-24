@@ -344,6 +344,12 @@ text-transform: capitalize;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+
+  .active {
+    opacity: 1;
   }
 
   .favorites__content {
