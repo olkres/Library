@@ -1,12 +1,13 @@
 //burger
 (function () {
    const burgerItem = document.querySelector('.burger');
-    const menu = document.querySelector('.nav');//обращается к menu и записывает его в переменную
+    const menu = document.querySelector('.nav');
     const menuCloseItem = document.querySelector('.nav-close');
     menuCloseItem.addEventListener('click', () => {
         menu.classList.remove('nav-active');
     });
-    burgerItem.addEventListener('click', () => {//при клике на burgerItem(.burger) для menu(.nav) добавляется класс "nav-active"
+    //при клике на burgerItem(.burger) для menu(.nav) добавляется класс "nav-active"
+    burgerItem.addEventListener('click', () => {
         menu.classList.add('nav-active');
     });
 }());
@@ -76,4 +77,65 @@ radioButtons.forEach(function(radio) {
       }
     });
   });
+});
+
+//модальные окна signup/login 
+const openModalLogin = document.getElementById('open-modal-login');
+const openModalSign = document.getElementById('open-modal-sign');
+const closeModalLogin = document.getElementById('modal-close-login');
+const closeModalSign = document.getElementById('modal-close-sign');
+const modalLogin = document.getElementById('modal-login');
+const modalSign = document.getElementById('modal-register');
+
+openModalLogin.addEventListener('click', function(e) {
+  e.preventDefault();
+  modalLogin.classList.add('modal-active');
+});
+
+closeModalLogin.addEventListener('click', function(e) {
+  e.preventDefault();
+  modalLogin.classList.remove('modal-active');
+});
+
+openModalSign.addEventListener('click', function(e) {
+  e.preventDefault();
+  modalSign.classList.add('modal-active');
+});
+
+closeModalSign.addEventListener('click', function(e) {
+  e.preventDefault();
+  modalSign.classList.remove('modal-active');
+});
+//смена окон login/register
+const toRegister = document.querySelector('.modal-login__account');
+const toLogin = document.querySelector('.modal-register__account');
+
+toRegister.addEventListener('click', () => {
+  modalLogin.classList.remove('modal-active');
+  modalSign.classList.add('modal-active');
+});
+
+toLogin.addEventListener('click', () => {
+  modalLogin.classList.add('modal-active');
+  modalSign.classList.remove('modal-active');
+});
+//всплывающее меню возле иконки пользователя
+const openDropMenu = document.querySelector('.profile');
+const dropMenu = document.querySelector('.drop-menu');
+
+openDropMenu.addEventListener('click', () => {
+  dropMenu.classList.toggle('drop-menu-active');
+});
+//открывает login/register из dropmenu
+const openDropMenuLogin = document.querySelector('.drop-menu__login');
+const openDropMenuRegister = document.querySelector('.drop-menu__register');
+
+openDropMenuLogin.addEventListener('click', () =>{
+  modalLogin.classList.add('modal-active');
+  dropMenu.classList.remove('drop-menu-active');
+});
+
+openDropMenuRegister.addEventListener('click', () =>{
+  modalSign.classList.add('modal-active');
+  dropMenu.classList.remove('drop-menu-active');
 });

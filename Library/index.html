@@ -34,6 +34,11 @@
                     <span class="nav-close-line"></span>
                 </div>
             </nav>
+            <div class="drop-menu">
+                <div class="drop-menu__profile">Profile</div>
+                <div class="drop-menu__login">Log In</div>
+                <div class="drop-menu__register">Register</div>
+            </div>
             <div class="profile"></div>
             <div class="header__burger burger">
                 <span class="burger__line burger__line_first"></span>
@@ -560,7 +565,7 @@
                                 <input type="text" placeholder="Reader's name" class="reader__name">
                                 <input type="text" placeholder="Card number">                        
                             </div>
-                            <button class="card__button">Check the card</button>
+                            <button class="card__button" disabled>Check the card</button>
                         </form>
                     </div>
                     <div class="get__card">
@@ -571,8 +576,8 @@
                             account
                         </div>
                         <div class="get__card-button">
-                            <button class="get__card-btn">Sign Up</button>
-                            <button class="get__card-btn">Log in</button>
+                            <button class="get__card-btn" id="open-modal-sign">Sign Up</button>
+                            <button class="get__card-btn" id="open-modal-login">Log in</button>
                         </div>
                     </div>
                 </div>
@@ -621,6 +626,46 @@
         </div>
 
     </footer>
+    <div class="modal-login" id="modal-login">
+        <div class="modal-login__container">
+            <div class="modal-login__body">
+                <img src="./assets/icons/modal-close.svg" alt="btn-close" class="modal-close" id="modal-close-login">
+                <h4 class="modal-login__title">login</h4>
+                <form action="/" class="modal-login__form">
+                    <label for="login__email" class="modal-login__label">E-mail or readers card</label>
+                    <input id="login__email" type="email" class="modal-login__field">
+                    <label for="login__password" class="modal-login__label">Password</label>
+                    <input id="login__password" type="password" class="modal-login__field">
+                    <button class="modal-login__button">Log In</button>
+                </form>
+                <div class="modal-login__else">Don't have an account?
+                    <button class="modal-login__account">Register</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-register" id="modal-register">
+        <div class="modal-register__container">
+            <div class="modal-register__body">
+                <img src="./assets/icons/modal-close.svg" alt="btn-close" class="modal-close" id="modal-close-sign">
+                <h4 class="modal-register__title">register</h4>
+                <form action="/" class="modal-register__form">
+                    <label for="first__name" class="modal-register__label">First name</label>
+                    <input id="first__name" type="email" class="modal-register__field">
+                    <label for="last__name" class="modal-register__label">Last name</label>
+                    <input id="last__name" type="email" class="modal-register__field">
+                    <label for="login__email" class="modal-register__label">E-mail</label>
+                    <input id="login__email" type="email" class="modal-register__field">
+                    <label for="login__password" class="modal-register__label">Password</label>
+                    <input id="login__password" type="password" class="modal-register__field">
+                    <button class="modal-register__button">Sign In</button>
+                </form>
+                <div class="modal-register__else">Already have an account?
+                    <button class="modal-register__account">Login</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="index.js"></script>
 </body>
 </html>
