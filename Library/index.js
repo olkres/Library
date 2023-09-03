@@ -84,28 +84,36 @@ const openModalLogin = document.getElementById('open-modal-login');
 const openModalSign = document.getElementById('open-modal-sign');
 const closeModalLogin = document.getElementById('modal-close-login');
 const closeModalSign = document.getElementById('modal-close-sign');
-const modalLogin = document.getElementById('modal-login');
-const modalSign = document.getElementById('modal-register');
+const modalLogin = document.querySelector('.modal-login');
+const modalSign = document.querySelector('.modal-register');
 
-openModalLogin.addEventListener('click', function(e) {
-  e.preventDefault();
+openModalLogin.addEventListener('click', () => {
   modalLogin.classList.add('modal-active');
 });
 
-closeModalLogin.addEventListener('click', function(e) {
-  e.preventDefault();
+closeModalLogin.addEventListener('click', () => {
   modalLogin.classList.remove('modal-active');
 });
 
-openModalSign.addEventListener('click', function(e) {
-  e.preventDefault();
+openModalSign.addEventListener('click', () => {
   modalSign.classList.add('modal-active');
 });
 
-closeModalSign.addEventListener('click', function(e) {
-  e.preventDefault();
+closeModalSign.addEventListener('click', () => {
   modalSign.classList.remove('modal-active');
 });
+
+modalLogin.addEventListener('click', (event) => {
+  if(event.target.classList.contains('modal-login__container')) {
+    modalLogin.classList.toggle('modal-active');
+  }
+});
+modalSign.addEventListener('click', (event) => {
+  if(event.target.classList.contains('modal-register__container')) {
+    modalSign.classList.toggle('modal-active');
+  }
+});
+
 //смена окон login/register
 const toRegister = document.querySelector('.modal-login__account');
 const toLogin = document.querySelector('.modal-register__account');
@@ -139,3 +147,107 @@ openDropMenuRegister.addEventListener('click', () =>{
   modalSign.classList.add('modal-active');
   dropMenu.classList.remove('drop-menu-active');
 });
+
+//LOCAL STORAGE
+
+const registrationForm = document.querySelector('.modal-register__form');
+const firstNameInput = document.getElementById('first__name');
+const lastNameInput = document.getElementById('last__name');
+const emailInput = document.getElementById('register__email');
+const passwordInput = document.getElementById('register__password');
+// const registerButton = document.querySelector('.modal-register__button');
+
+function generateRandomCardNumber() {
+  const min = 0x10000000;
+  const max = 0xffffffff;
+  const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
+  const cardNumber = randomNumber.toString(16).toUpperCase().padStart(9, '0');
+  return cardNumber;
+}
+
+// отправка формы
+registrationForm.addEventListener('submit', function(event) {
+  event.preventDefault();
+
+  const firstName = firstNameInput.value;
+  const lastName = lastNameInput.value;
+  const email = emailInput.value;
+  const password = passwordInput.value;
+
+  // длина пароля
+  if (password.length < 8) {
+    alert('Пароль должен содержать не менее 8 символов');
+    return;
+  }
+  
+  // валидность пароля
+  const passwordRegex = /[A-Za-z0-9]/;
+  if (!passwordRegex.test(password)) {
+    alert('Пожалуйста, введите корректный пароль: только буквы и цифры');
+    return;
+  }
+
+  // валидность email
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(email)) {
+    alert('Пожалуйста, введите корректный email-адрес');
+    return;
+  }
+
+  // получение существующих пользователей
+  const users = JSON.parse(localStorage.getItem('users')) || [];
+
+  // проверка, что пользователь с таким email не существует
+  const existingUser = users.find(user => user.email === email);//если JSON.parse будет после
+  if (existingUser) {                                           //этого, код не будет работать
+    alert('Пользователь с таким email уже существует');
+    return;
+  }
+
+  // объекта с данными пользователя
+  const userData = {
+    firstName: firstName,
+    lastName: lastName,
+    email: email,
+    password: password,
+    сardNumber: generateRandomCardNumber()
+  };
+
+  // добавление нового пользователя в массив
+  users.push(userData);
+
+  // сохранение обновленного массива
+  localStorage.setItem('users', JSON.stringify(users));
+  
+  // очистка полей формы
+  firstNameInput.value = '';
+  lastNameInput.value = '';
+  emailInput.value = '';
+  passwordInput.value = '';
+});
+
+//АВТОРИЗАЦИЯ
+const loginForm = document.querySelector('.modal-login__form');
+const loginEmailInput = document.getElementById('login__email');
+const loginPasswordInput = document.getElementById('login__password');
+
+loginForm.addEventListener('submit', function(event) {
+  event.preventDefault();
+
+  const enteredEmail = loginEmailInput.value;
+  const enteredPassword = loginPasswordInput.value;
+
+  // получение существующих пользователей
+  const users = JSON.parse(localStorage.getItem('users')) || [];
+
+  // поиск пользователя с введенным email и паролем
+  const loggedInUser = users.find(user => user.email === enteredEmail && user.password === enteredPassword);
+
+  if (loggedInUser) {
+    location.reload();
+  } else {
+    alert('Неверные данные для авторизации');
+  }
+});
+
+

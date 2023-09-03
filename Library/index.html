@@ -39,7 +39,11 @@
                 <div class="drop-menu__login">Log In</div>
                 <div class="drop-menu__register">Register</div>
             </div>
-            <div class="profile"></div>
+            <div class="profile">
+                <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M28 14C28 21.732 21.732 28 14 28C6.26801 28 0 21.732 0 14C0 6.26801 6.26801 0 14 0C21.732 0 28 6.26801 28 14ZM18.6667 7.77778C18.6667 10.3551 16.5774 12.4444 14.0001 12.4444C11.4227 12.4444 9.33339 10.3551 9.33339 7.77778C9.33339 5.20045 11.4227 3.11111 14.0001 3.11111C16.5774 3.11111 18.6667 5.20045 18.6667 7.77778ZM19.4998 16.2781C20.9584 17.7367 21.7778 19.715 21.7778 21.7778H14L6.22225 21.7778C6.22225 19.715 7.0417 17.7367 8.50031 16.2781C9.95893 14.8194 11.9372 14 14 14C16.0628 14 18.0411 14.8194 19.4998 16.2781Z" fill="white"/>
+                  </svg>
+            </div>
             <div class="header__burger burger">
                 <span class="burger__line burger__line_first"></span>
                 <span class="burger__line burger__line_second"></span>
@@ -199,7 +203,7 @@
                                     as the modern world has changed around them.
                                     </p>
                             </div>
-                            <button class="favorites__button own" disabled>own</button>
+                            <button class="favorites__button buy">buy</button>
                         </div>
                         <div class="book__cover">
                             <img src="./assets/images/winter/4.jpg" alt="the last queen">
@@ -277,7 +281,7 @@
                                         For fans of Isabel Allende and Julia Alvarez.
                                     </p>
                             </div>
-                            <button class="favorites__button own" disabled>own</button>
+                            <button class="favorites__button buy">buy</button>
                         </div>
                         <div class="book__cover">
                             <img src="./assets/images/spring/4.jpg" alt="the last queen">
@@ -632,14 +636,14 @@
                 <img src="./assets/icons/modal-close.svg" alt="btn-close" class="modal-close" id="modal-close-login">
                 <h4 class="modal-login__title">login</h4>
                 <form action="/" class="modal-login__form">
-                    <label for="login__email" class="modal-login__label">E-mail or readers card</label>
-                    <input id="login__email" type="email" class="modal-login__field">
-                    <label for="login__password" class="modal-login__label">Password</label>
-                    <input id="login__password" type="password" class="modal-login__field">
-                    <button class="modal-login__button">Log In</button>
+                    <label for="login__email" class="modal-login__label">E-mail or readers card
+                    <input id="login__email" type="email" class="modal-login__field"></label>
+                    <label for="login__password" class="modal-login__label">Password
+                    <input id="login__password" type="password" class="modal-login__field"></label>
+                    <button type="submit" class="modal-login__button">Log In</button>
                 </form>
                 <div class="modal-login__else">Don't have an account?
-                    <button class="modal-login__account">Register</button>
+                    <button  class="modal-login__account">Register</button>
                 </div>
             </div>
         </div>
@@ -650,15 +654,15 @@
                 <img src="./assets/icons/modal-close.svg" alt="btn-close" class="modal-close" id="modal-close-sign">
                 <h4 class="modal-register__title">register</h4>
                 <form action="/" class="modal-register__form">
-                    <label for="first__name" class="modal-register__label">First name</label>
-                    <input id="first__name" type="email" class="modal-register__field">
-                    <label for="last__name" class="modal-register__label">Last name</label>
-                    <input id="last__name" type="email" class="modal-register__field">
-                    <label for="login__email" class="modal-register__label">E-mail</label>
-                    <input id="login__email" type="email" class="modal-register__field">
-                    <label for="login__password" class="modal-register__label">Password</label>
-                    <input id="login__password" type="password" class="modal-register__field">
-                    <button class="modal-register__button">Sign In</button>
+                    <label for="first__name" class="modal-register__label">First name
+                    <input id="first__name" type="text" class="modal-register__field"></label>
+                    <label for="last__name" class="modal-register__label">Last name
+                    <input id="last__name" type="text" class="modal-register__field"></label>
+                    <label for="register__email" class="modal-register__label">E-mail
+                    <input id="register__email" type="email" class="modal-register__field"></label>
+                    <label for="register__password" class="modal-register__label">Password
+                    <input id="register__password" type="password" class="modal-register__field"></label>
+                    <button type="submit" class="modal-register__button" id="modal-register__button">Sign In</button>
                 </form>
                 <div class="modal-register__else">Already have an account?
                     <button class="modal-register__account">Login</button>
